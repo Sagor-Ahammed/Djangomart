@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-2 col-md-3 col-6">
-          {% comment %} <a href="{% url 'home' %}" class="brand-wrap"> {% endcomment %}
+          <a href="{% url 'home' %}" class="brand-wrap">
             <h3>DjangoMart</h3>
           </a>
           <!-- brand-wrap.// -->
@@ -20,8 +20,8 @@
               <i class="fa fa-bars"></i> All category
             </button>
             <div class="dropdown-menu">
-              {% comment %} <a class="dropdown-item" href="{% url 'store' %}"
-                >All Products {% endcomment %}
+              <a class="dropdown-item" href="{% url 'store' %}"
+                >All Products 
               </a>
               {% for category in links %}
               <a class="dropdown-item" href="{{ category.get_url }}"
@@ -34,7 +34,7 @@
         </div>
         <!-- col.// -->
         
-        {% comment %} <a href="{% url 'store' %}" class="btn btn-outline-info">Store</a> {% endcomment %}
+        <a href="{% url 'store' %}" class="btn btn-outline-info">Store</a>
         <div class="col-lg col-md-6 col-sm-12 col">
           {% comment %} <form action="{% url 'search' %}" class="search" method="GET"> {% endcomment %}
             <div class="input-group w-100">
@@ -62,15 +62,15 @@
             <div class="widget-header">
               <small class="title text-muted">Welcome guest!</small>
               <div>
-                {% comment %} <a href="{% url 'login' %}">Login</a> {% endcomment %}
+                <a href="{% url 'login' %}">Login</a>
                 <span class="dark-transp"> | </span>
-                {% comment %} <a href="{% url 'register' %}"> Register</a> {% endcomment %}
+                <a href="{% url 'register' %}"> Register</a>
               </div>
             </div>
             {% else %}
             <div class="widget-header">
-              {% comment %} <small class="title text-muted"
-                >Welcome {{user.first_name}}!</small {% endcomment %}
+              <small class="title text-muted"
+                >Welcome {{user.first_name}}!</small 
               >
               <div>
                 {% comment %} <a href="{% url 'dashboard' %}">Dashboard</a> {% endcomment %}
