@@ -37,7 +37,7 @@
                   <li><a href="{% url 'store' %}">All Products </a></li>
                   {% for category in links %}
                   <li>
-                    <a href="{% url 'products_by_category' category.slug%}"
+                    <a href="{{ category.get_url }}"
                       >{{ category.category_name }}
                     </a>
                   </li>
@@ -156,14 +156,14 @@
           <div class="col-md-4">
             <figure class="card card-product-grid">
               <div class="img-wrap">
-                <a href=""
+                <a href="{{ product.get_url }}"
                   ><img src="{{ product.image.url }}"
                 /></a>
               </div>
               <!-- img-wrap.// -->
               <figcaption class="info-wrap">
                 <div class="fix-height">
-                  <a href="{{product.get_url}}" class="title"
+                  <a href="{{ product.get_url }}" class="title"
                     >{{ product.product_name }}</a
                   >
                   <div class="price-wrap mt-2">
@@ -172,9 +172,9 @@
                   <!-- price-wrap.// -->
                 </div>
                 <a
-                  href=""
+                  href="{{ product.get_url }}"
                   class="btn btn-block btn-primary"
-                  >Add to Cart
+                  >View Details
                 </a>
               </figcaption>
             </figure>
